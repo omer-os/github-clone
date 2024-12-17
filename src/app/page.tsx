@@ -2,7 +2,15 @@
 
 import * as React from "react";
 import { useTheme } from "next-themes";
-import { Check, ChevronsUpDown, Moon, Sun, Laptop } from "lucide-react";
+import {
+  Check,
+  ChevronsUpDown,
+  Moon,
+  Sun,
+  Laptop,
+  SunDim,
+  Pen,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -182,6 +190,26 @@ export default function ShadcnUIShowcase() {
     <div className="container mx-auto p-4 space-y-8">
       <h1 className="text-3xl font-bold mb-4">shadcn/ui Component Showcase</h1>
 
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">Variants</h2>
+        <div className="flex flex-wrap gap-4 bg-muted/20 p-4 rounded">
+          <Button prefix={<SunDim />} variant="default">
+            Default
+          </Button>
+          <Button variant="secondary">Secondary</Button>
+          <Button variant="destructive">Destructive</Button>
+          <Button variant="ghost">Ghost</Button>
+          <Button variant="link">Link</Button>
+          <Button prefix={<Pen size={12} />} variant="outline">
+            Outline
+          </Button>
+          <Button variant="success">Success</Button>
+          <Button variant="warning">Warning</Button>
+          <Button variant="info">Info</Button>
+          <Button variant="light">Light</Button>
+          <Button variant="dark">Dark</Button>
+        </div>
+      </section>
       <section>
         <h2 className="text-2xl font-semibold mb-2">Basic Inputs</h2>
         <div className="space-y-4">
